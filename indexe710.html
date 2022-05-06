@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+
+
+<html dir="ltr" lang="en">
+
+    
+<!-- Mirrored from impact.gocarbonneutral.org/index.php?rel=user_registration by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Apr 2022 21:04:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<body>      
+        <div id="wrapper">
+
+
+                        <!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="key, words">
+        <meta name="description" content="description">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>Human Impacts</title>
+
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/style2.css" rel="stylesheet" type="text/css">
+        <link href="css/style_dev.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" media="all" type="text/css" href="css/skeleton.css">
+        <link rel="stylesheet" media="all" type="text/css" href="css/nzs-frame-media.css">
+        <link rel="stylesheet" media="all" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="all" type="text/css" href="icofont/css/icofont.html">
+    
+        
+        <script src="js/core.js"></script>
+        
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+            
+    <div>
+    
+            <link href="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" type="text/css">
+<script src="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<style>
+    .form-control{
+    width: 80% !important;
+    margin-left: 1% !important;
+    float: inherit !important; 
+}
+</style>
+<div class="container">
+    <div class="data_entry">
+        <form action="#" method="post" id="reg" novalidate="novalidate">
+            <h3 class="title_r">Register</h3>
+            <div class="head_lable">First Name</div>
+            <div class="j"><input type="text" class="form-control" id="name" name="name" style="width:60% !important;"/> </div><br />
+            <div class="head_lable">Last Name</div>
+            <div class="j"><input type="text" class="form-control" id="last_name" name="last_name" style="width:60% !important;"/> </div><br />
+            <div class="head_lable">Email</div>
+            <div class="j"><input type="text" class="form-control" id="email" name="email" style="width:60% !important;"/> </div><br />
+            <div class="head_lable">Password</div>
+            <div class="j"><input type="password" class="form-control" id="password" name="password" style="width:60% !important;"/> </div><br />
+            <div class="head_lable">Institution </div>
+            <div class="j"><input type="text" class="form-control" class="form-control" name="institution" id="exampleInputPassword1" placeholder="" style="width:60% !important;"></div>
+            <div class="action">
+                <input type="submit" name="register" class="btn btn-primary" value="Register"/>
+                <input type="button" name="cancel" class="btn btn-primary" value="Cancel"  onclick="window.location.href = 'index-2.html'"/>                
+            </div>
+        </form> 
+    </div>
+</div>
+<style>
+    .j label{
+        margin-left: 30%;
+        width: 100% !important;
+    }
+    .container{
+
+    }
+    .action{
+        margin: 8% 0% 0% 30%;
+    }
+    .head_lable{
+        float:left;
+        width:30%;
+    }
+    .data_entry{
+        border: 1px solid #b2b2b2;
+        width: 48%;
+        padding: 35px;
+        margin:3% 0% 0% 25%;
+    }
+    .title_r{
+        font-size: 24px;
+        background: aliceblue;
+        margin-bottom: 50px;
+    }
+
+    .form-control {
+        width: 60% !important;
+        margin-left:10% !important;
+    }
+    label.error{
+        color:red !important;
+    }
+    label {
+        width: 30% !important;
+    }
+    .form-group{
+        margin-left: 10% !important;
+    }
+</style>
+
+<script src="../code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+
+<script>
+
+// When the browser is ready...
+                    $(function () {
+
+                        // Setup form validation on the #register-form element
+                        $("#reg").validate({
+                            // Specify the validation rules
+                            rules: {
+                                name: "required",
+                                last_name: "required",
+                                password: "required",
+                                email: {
+                                    required: true,
+                                    email: true
+                                }
+                            },
+                            // Specify the validation error messages
+                            messages: {
+                                name: "Please enter your first name",
+                                last_name: "Please enter your last name",
+                                password: "Please enter your password",
+                                email: "Please enter a valid email address"
+                            },
+                            submitHandler: function (form) {
+                                form.submit();
+                            }
+                        });
+
+                    });
+
+</script>
+
+
+            <footer>
+
+</footer>
+
+        </div>
+
+    </body>
+
+
+<!-- Mirrored from impact.gocarbonneutral.org/index.php?rel=user_registration by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Apr 2022 21:04:03 GMT -->
+</html>
+
+

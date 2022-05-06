@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+
+
+<html dir="ltr" lang="en">
+
+    
+<!-- Mirrored from impact.gocarbonneutral.org/index.php?rel=all_ind_entry by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Apr 2022 21:04:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<body>      
+        <div id="wrapper">
+
+
+                        <!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="key, words">
+        <meta name="description" content="description">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>Human Impacts</title>
+
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/style2.css" rel="stylesheet" type="text/css">
+        <link href="css/style_dev.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" media="all" type="text/css" href="css/skeleton.css">
+        <link rel="stylesheet" media="all" type="text/css" href="css/nzs-frame-media.css">
+        <link rel="stylesheet" media="all" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="all" type="text/css" href="icofont/css/icofont.html">
+    
+        
+        <script src="js/core.js"></script>
+        
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+            
+    <div>
+    
+            <link href="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" type="text/css">
+<link href="../cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+<script src="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../code.jquery.com/jquery-1.12.4.js"></script>
+<script src="../cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+
+<div class="container clearfix">
+    <h1 style="text-align: center;"> Traceable evidence of the impacts of climate change on humanity </h1> 
+    <h3 style="text-align: center;"> <u> Entries </u> </h3>
+    <p style="text-align: right;"><strong><a href="index-2.html">back</a></strong></p>
+    <table class="table table-bordered ind_entry">
+        <thead>
+            <tr style="background: #c1d1f4;">
+                <th>Reference ID</th>
+                <th>Authors </th>
+                <th>Year</th>
+                <th>Title</th>
+                <th>PDF</th>
+                <th>Entry Id</th>
+                <th>Climatic Change</th>
+				
+				<th>Primary Impact</th>
+				<th>Secondary Impact</th>
+                <th>Effect</th>
+                <th>Comment/Finding</th>
+				<th>Entered by</th>
+                <th>Update</th>
+                <th>Validate by</th>      
+            </tr>
+        </thead>
+        <tbody>
+            
+
+
+
+        </tbody>
+    </table>
+</div>
+<link href="css/toastr.min.css" rel="stylesheet" type="text/css">
+<script src="js/toastr.min.js"></script>
+<style>
+    .container{
+        position: relative;
+        width: 1170px;
+        margin: 0 auto;
+        padding: 0;
+        display: table;
+        top: 20px;
+    }
+    .clearfix{
+        zoom: 1;
+        border: 1px solid #b2b2b2;
+        padding: 3%;
+    }
+</style>
+
+<script>
+    function checkvalidat(uid, rid, eid) {
+        var user_id = '';
+        if (user_id) {
+
+        } else {
+            toastr.error('Please Login first');
+            return false;
+        }
+
+        var uid = uid;
+        var rid = rid;
+
+        $.ajax({
+            type: 'POST',
+            url: 'getCheckValidate.php',
+            data: {uid: uid, rid: rid, user_id: user_id, eid: eid},
+            success: function (data) {
+                if (data == 'not_auth') {
+                    toastr.error('You are not authorized to validate data, contact Cmora@hawaii.edu for permission');
+                } else {
+                    location.reload();
+                }
+            }
+        });
+    }
+
+    function editvalidate(uid, rid, eid) {        
+        if (uid) {
+            var uid = uid;
+            var rid = rid;
+
+
+            $.ajax({
+                type: 'POST',
+                url: 'getCheckValidateEdit.php',
+                data: {uid: uid},
+                success: function (data) {
+                    if (data == 'not_auth') {
+                        toastr.error('You are not authorized to edit data');
+                    } else if (data == 'curator') {
+                        window.location.href = 'index0ccd.html?rel=entries&amp;edit_main_entry=' + rid + '&enid=' + eid + "&from_listing=1";
+                    }
+                }
+            });
+
+        } else {            
+            toastr.error('Please Login first');            
+            return false;
+        }
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        var user_id = '';
+    $('.ind_entry').DataTable( {
+        "processing": true,
+        "serverSide": true,
+        "searching": false,
+        columnDefs: [
+            { orderable: false, targets: [1,2,3,4,8,9,10,12,13] }
+        ],
+        "ajax": "get_indi_entry.php?user_id="+user_id
+    } );
+} );
+</script>
+            <footer>
+
+</footer>
+
+        </div>
+
+    </body>
+
+
+<!-- Mirrored from impact.gocarbonneutral.org/index.php?rel=all_ind_entry by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Apr 2022 21:04:05 GMT -->
+</html>
+
+
