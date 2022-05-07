@@ -38,7 +38,7 @@
 <div class="container clearfix">
     <h1 style="text-align: center;"> Traceable evidence of the impacts of climate change on humanity </h1> 
     <h3 style="text-align: center;"> <u> References </u> </h3>
-    <p style="text-align: right;"><strong><a href="index-2.html">Back</a></strong></p>
+    <p style="text-align: right;"><strong><a href="index.html">Back</a></strong></p>
     <table class="table table-bordered ind_entry">
         <thead>
             <tr style="background: #c1d1f4;">
@@ -49,7 +49,6 @@
                 <th>Year</th>
                 <th>Title</th>
                 <th>Journal</th>
-                
                 <th>Volume</th>
                 <th>Pages</th>
                 <th>Book Title</th>
@@ -57,9 +56,6 @@
                 <th>Publisher</th>
                 <th>City</th>
                 <th>Institution</th>
-                <th>PDF</th>
-                <th>Entries</th>
-                <th>Edit</th>                   
             </tr>
         </thead>
         <tbody>
@@ -69,44 +65,13 @@
 </div>
 <link href="css/toastr.min.css" rel="stylesheet" type="text/css">
 <script src="js/toastr.min.js"></script>
-
-<script>
-    function checkvalidat(uid, rid, eid) {
-        var user_id = '';
-        if (user_id) {
-
-        } else {
-            toastr.error('Please Login first');
-            return false;
-        }
-
-        var uid = uid;
-        var rid = rid;
-
-        $.ajax({
-            type: 'POST',
-            url: 'https://impact.gocarbonneutral.org/getCheckValidate.php',
-            data: {uid: uid, rid: rid, user_id: user_id, eid: eid},
-            success: function (data) {
-                if (data == 'not_auth') {
-                    toastr.error('You are not authorized to validate data, contact Cmora@hawaii.edu for permission');
-                } else {
-                    location.reload();
-                }
-            }
-        });
-    }
-
- 
-</script>
 <script>
     $(document).ready(function() {
-        var user_id = '';
         $('.ind_entry').DataTable( {
             "processing": true,
-            "searching": false,       
+            "searching": true,
             columnDefs: [
-                { orderable: false, targets: [1,2,3,4,8,9,10,12,13,14,15] }
+                { orderable: true, targets: [1,2,3,4,8,9,10,12,13] }
             ],
             ajax:  "references.json"
         });
